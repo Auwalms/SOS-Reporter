@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fadeScrollbars="true"
+    tools:context="com.example.app.e_rer.nema">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <Button
+            style="@style/Button1"
+            android:onClick="flooding"
+            android:text="Flooding" />
+
+        <Button
+            style="@style/Button2"
+            android:onClick="crisis"
+            android:text="Communal Crisis" />
+
+        <Button
+            style="@style/Button1"
+            android:onClick="outbreak"
+            android:text="Disease Outbreak" />
+
+    </LinearLayout>
+
+</ScrollView>

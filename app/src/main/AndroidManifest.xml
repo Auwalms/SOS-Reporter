@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.app.e_rer">
+
+    <uses-permission android:name="android.permission.SEND_SMS" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".police"
+            android:label="Police"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".fire"
+            android:label="Fire Service"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".ambulance"
+            android:label="Ambulance"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".nema"
+            android:label="NEMA"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".frsc"
+            android:label="Road Safety"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".about"
+            android:label="About App"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".Robbery"
+            android:label="Robbery"
+            android:parentActivityName=".police" />
+        <activity
+            android:name=".Riot"
+            android:label="Riot"
+            android:parentActivityName=".police" />
+        <activity
+            android:name=".Rape"
+            android:label="Rape"
+            android:parentActivityName=".police" />
+        <activity
+            android:name=".Assault"
+            android:label="Assault"
+            android:parentActivityName=".police" />
+        <activity
+            android:name=".Vehicle"
+            android:label="Vehicle Theft"
+            android:parentActivityName=".police" />
+        <activity
+            android:name=".accident"
+            android:label="Car Accident"
+            android:parentActivityName=".frsc" />
+        <activity
+            android:name=".fallen"
+            android:label="Fallen Vehicle"
+            android:parentActivityName=".frsc" />
+        <activity
+            android:name=".traffic"
+            android:label="Traffic Congestion"
+            android:parentActivityName=".frsc" />
+        <activity
+            android:name=".flooding"
+            android:label="Flooding"
+            android:parentActivityName=".nema" />
+        <activity
+            android:name=".crisis"
+            android:label="Communal Crisis"
+            android:parentActivityName=".nema" />
+        <activity
+            android:name=".outbreak"
+            android:label="Disease Outbreak"
+            android:parentActivityName=".nema" />
+        <activity
+            android:name=".ambaccident"
+            android:label="Accident"
+            android:parentActivityName=".ambulance" />
+        <activity
+            android:name=".ambmedical"
+            android:label="Medical Emergency"
+            android:parentActivityName=".ambulance" />
+        <activity
+            android:name=".ambfire"
+            android:label="Fire Emergency"
+            android:parentActivityName=".ambulance" />
+        <activity
+            android:name=".ambriot"
+            android:label="Riot Emergency"
+            android:parentActivityName=".ambulance">
+
+        </activity>
+    </application>
+
+</manifest>

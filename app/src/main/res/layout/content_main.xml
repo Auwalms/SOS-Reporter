@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.app.e_rer.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingLeft="32dp"
+            android:paddingRight="32dp">
+
+            <ImageButton
+                android:id="@+id/police"
+                style="@style/ImgBtnLeft"
+                android:contentDescription="Police"
+                android:onClick="police"
+                android:src="@drawable/police" />
+
+            <ImageButton
+                android:id="@+id/fireservice"
+                style="@style/ImgBtnRight"
+                android:contentDescription="Fire Service"
+                android:onClick="fire"
+                android:src="@drawable/fire" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="32dp">
+
+            <ImageButton
+                android:id="@+id/frsc"
+                style="@style/ImgBtnCenter"
+                android:contentDescription="Road Safety"
+                android:onClick="roadSafety"
+                android:src="@drawable/frsc" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingLeft="32dp"
+            android:paddingRight="32dp"
+            android:paddingTop="1dp">
+
+
+            <ImageButton
+                android:id="@+id/nema"
+                style="@style/ImgBtnLeft"
+                android:contentDescription="NEMA"
+                android:onClick="nema"
+                android:src="@drawable/nema" />
+
+            <ImageButton
+                android:id="@+id/ambulance"
+                style="@style/ImgBtnRight"
+                android:contentDescription="Ambulance"
+                android:onClick="ambulance"
+                android:src="@drawable/ambulance" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</ScrollView>
