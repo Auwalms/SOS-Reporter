@@ -1,27 +1,30 @@
-package com.example.app.e_rer;
+package com.gdg.lafia.e_rer;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.telephony.SmsManager;
 import android.view.View;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class traffic extends AppCompatActivity {
+public class fallen extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_traffic);
+        setContentView(R.layout.activity_fallen);
     }
 
     public void report(View view) {
         EditText locationField = (EditText) findViewById(R.id.locationid);
         String location = locationField.getText().toString();
 
+        CheckBox withArm = (CheckBox) findViewById(R.id.armedbox);
+        boolean armedbox = withArm.isChecked();
 
-        String content = smsSummary(location);
+        String content = smsSummary(location, armedbox);
         String number = "1";
         SmsManager smsManager = SmsManager.getDefault();
         Toast.makeText(getApplicationContext(), "Thank You for Reporting, Dispatch Team will be sent Immediately", Toast.LENGTH_LONG).show();
@@ -32,8 +35,9 @@ public class traffic extends AppCompatActivity {
 
     }
 
-    private String smsSummary(String location) {
-        String content = "There is a traffic congestion at " + location;
+    private String smsSummary(String location, boolean armedbox) {
+        String content = "Help Needed, we have a fallen vehicle at " + location;
+        content += "\nCasualty Status = " + armedbox;
         return content;
 
     }

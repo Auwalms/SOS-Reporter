@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:fadeScrollbars="true"
     android:orientation="vertical"
-    tools:context="com.example.app.e_rer.ambulance">
+    tools:context="com.gdg.lafia.e_rer.ambulance">
 
     <LinearLayout
         android:layout_width="match_parent"

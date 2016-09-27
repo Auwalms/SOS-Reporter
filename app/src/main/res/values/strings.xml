@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">E-ReR</string>
     <string name="action_settings">About App</string>
+    <string name="about">About Dev</string>
 </resources>

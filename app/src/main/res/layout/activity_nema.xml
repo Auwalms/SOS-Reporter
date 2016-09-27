@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fadeScrollbars="true"
-    tools:context="com.example.app.e_rer.nema">
+    tools:context="com.gdg.lafia.e_rer.nema">
 
     <LinearLayout
         android:layout_width="match_parent"

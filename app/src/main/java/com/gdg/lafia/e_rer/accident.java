@@ -1,4 +1,4 @@
-package com.example.app.e_rer;
+package com.gdg.lafia.e_rer;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,12 +9,12 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class fire extends AppCompatActivity {
+public class accident extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_fire);
+        setContentView(R.layout.activity_accident);
     }
 
     public void report(View view) {
@@ -25,7 +25,7 @@ public class fire extends AppCompatActivity {
         boolean armedbox = withArm.isChecked();
 
         String content = smsSummary(location, armedbox);
-        String number = "1";  // The number on which you want to send SMS
+        String number = "1";
         SmsManager smsManager = SmsManager.getDefault();
         Toast.makeText(getApplicationContext(), "Thank You for Reporting, Dispatch Team will be sent Immediately", Toast.LENGTH_LONG).show();
         smsManager.sendTextMessage(number, null, content, null, null);
@@ -36,10 +36,9 @@ public class fire extends AppCompatActivity {
     }
 
     private String smsSummary(String location, boolean armedbox) {
-        String content = "Riot on going at " + location + "\nCasuality = " + armedbox;
+        String content = "An accident has just occured at " + location;
+        content += "\nCasualty Status = " + armedbox;
         return content;
 
     }
-
 }
-

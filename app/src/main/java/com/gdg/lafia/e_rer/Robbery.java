@@ -1,4 +1,4 @@
-package com.example.app.e_rer;
+package com.gdg.lafia.e_rer;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,12 +9,12 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class flooding extends AppCompatActivity {
+public class Robbery extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_flooding);
+        setContentView(R.layout.activity_robbery);
     }
 
     public void report(View view) {
@@ -31,13 +31,11 @@ public class flooding extends AppCompatActivity {
         smsManager.sendTextMessage(number, null, content, null, null);
         Intent close = new Intent(this, MainActivity.class);
         startActivity(close);
-
-
     }
 
     private String smsSummary(String location, boolean armedbox) {
-        String content = "Flooding is currently occuring at " + location;
-        content += "\nCasualty Status = " + armedbox;
+        String content = "We need help, there is a robbery at " + location;
+        content += "\nArmed Status = " + armedbox;
         return content;
 
     }

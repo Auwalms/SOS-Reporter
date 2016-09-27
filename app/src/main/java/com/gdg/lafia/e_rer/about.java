@@ -1,4 +1,4 @@
-package com.example.app.e_rer;
+package com.gdg.lafia.e_rer;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;

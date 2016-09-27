@@ -1,4 +1,4 @@
-package com.example.app.e_rer;
+package com.gdg.lafia.e_rer;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -65,6 +65,8 @@ public class MainActivity extends AppCompatActivity {
             Intent mintent = new Intent(this, about.class);
             startActivity(mintent);
             return true;
+        } else if (id == R.id.about_dev) {
+            startActivity(new Intent(this, about_dev.class));
         }
 
         return super.onOptionsItemSelected(item);

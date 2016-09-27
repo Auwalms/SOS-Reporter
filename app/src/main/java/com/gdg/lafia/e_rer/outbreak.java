@@ -1,4 +1,4 @@
-package com.example.app.e_rer;
+package com.gdg.lafia.e_rer;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,12 +9,12 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class ambaccident extends AppCompatActivity {
+public class outbreak extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_ambaccident);
+        setContentView(R.layout.activity_outbreak);
     }
 
     public void report(View view) {
@@ -36,8 +36,9 @@ public class ambaccident extends AppCompatActivity {
     }
 
     private String smsSummary(String location, boolean armedbox) {
-        String content = "We need an ambulance, An accident just occurred at " + location;
+        String content = "We are experiencing a Disease Outbreak at " + location;
         content += "\nCasualty Status = " + armedbox;
         return content;
+
     }
 }

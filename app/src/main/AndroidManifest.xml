@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.app.e_rer">
+    package="com.gdg.lafia.e_rer">
 
     <uses-permission android:name="android.permission.SEND_SMS" />
 
@@ -103,9 +103,11 @@
         <activity
             android:name=".ambriot"
             android:label="Riot Emergency"
-            android:parentActivityName=".ambulance">
-
-        </activity>
+            android:parentActivityName=".ambulance" />
+        <activity
+            android:name=".about_dev"
+            android:label="About Dev"
+            android:parentActivityName=".MainActivity" />
     </application>
 
 </manifest>
