@@ -21,28 +21,24 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void police(View view) {
-        Intent polIntent = new Intent(this, police.class);
-        startActivity(polIntent);
+        startActivity(new Intent(this, police.class));
     }
 
     public void fire(View view) {
-        Intent firIntent = new Intent(this, fire.class);
-        startActivity(firIntent);
+        startActivity(new Intent(this, fire.class));
     }
 
     public void ambulance(View view) {
-        Intent ambIntent = new Intent(this, ambulance.class);
-        startActivity(ambIntent);
+        startActivity(new Intent(this, ambulance.class));
     }
 
     public void roadSafety(View view) {
-        Intent frscIntent = new Intent(this, frsc.class);
-        startActivity(frscIntent);
+
+        startActivity(new Intent(this, frsc.class));
     }
 
     public void nema(View view) {
-        Intent nemaIntent = new Intent(this, nema.class);
-        startActivity(nemaIntent);
+        startActivity(new Intent(this, nema.class));
     }
 
     @Override
@@ -54,21 +50,15 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
-            // Code you want run when activity is clicked
-            Intent mintent = new Intent(this, about.class);
-            startActivity(mintent);
+            // Code that run when activity is button is clicked
+            startActivity(new Intent(this, about.class));
             return true;
         } else if (id == R.id.about_dev) {
             startActivity(new Intent(this, about_dev.class));
         }
-
         return super.onOptionsItemSelected(item);
     }
 }
