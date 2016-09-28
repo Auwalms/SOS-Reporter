@@ -9,4 +9,4 @@
  * BuildTool: 24.0.2
  
 ### Usage
-To Use this repo, clone [https://github.com/Auwalms/E-ReR.git] 
+To Use this repo,  **Clone https://github.com/Auwalms/E-ReR.git** 
