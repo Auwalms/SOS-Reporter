@@ -30,7 +30,7 @@ public class Vehicle extends AppCompatActivity {
         String time = timeField.getText().toString();
 
         CheckBox withArm = (CheckBox) findViewById(R.id.armedbox);
-        boolean armedbox = withArm.isChecked();
+        String armedbox = (withArm.isChecked()) ? "Yes" : "No";
 
         String content = smsSummary(location, vehicleType, plateno, time, armedbox);
         String number = "1";
@@ -39,7 +39,7 @@ public class Vehicle extends AppCompatActivity {
         smsManager.sendTextMessage(number, null, content, null, null);
     }
 
-    public String smsSummary(String location, String vehicleType, String plateno, String time, boolean armedbox) {
+    public String smsSummary(String location, String vehicleType, String plateno, String time, String armedbox) {
         String content = "Vehicle Theft at " + location;
         content += "\nVehicle Type = " + vehicleType;
         content += "\nPlate Number = " + plateno;

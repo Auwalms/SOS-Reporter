@@ -9,6 +9,8 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import static com.gdg.lafia.e_rer.R.id.armedbox;
+
 public class Assault extends AppCompatActivity {
 
     @Override
@@ -21,8 +23,8 @@ public class Assault extends AppCompatActivity {
         EditText locationField = (EditText) findViewById(R.id.locationid);
         String location = locationField.getText().toString();
 
-        CheckBox withArm = (CheckBox) findViewById(R.id.armedbox);
-        boolean armedbox = withArm.isChecked();
+        CheckBox withArm = (CheckBox) findViewById(armedbox);
+        String armedbox = (withArm.isChecked()) ? "Yes" : "No";
 
         String content = smsSummary(location, armedbox);
         String number = "1";
@@ -35,7 +37,7 @@ public class Assault extends AppCompatActivity {
 
     }
 
-    private String smsSummary(String location, boolean armedbox) {
+    private String smsSummary(String location, String armedbox) {
         String content = "We need help, there is an assault at " + location + "\nArmed Status = " + armedbox;
         return content;
 

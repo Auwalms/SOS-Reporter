@@ -22,7 +22,7 @@ public class accident extends AppCompatActivity {
         String location = locationField.getText().toString();
 
         CheckBox withArm = (CheckBox) findViewById(R.id.armedbox);
-        boolean armedbox = withArm.isChecked();
+        String armedbox = (withArm.isChecked()) ? "Yes" : "No";
 
         String content = smsSummary(location, armedbox);
         String number = "1";
@@ -35,7 +35,7 @@ public class accident extends AppCompatActivity {
 
     }
 
-    private String smsSummary(String location, boolean armedbox) {
+    private String smsSummary(String location, String armedbox) { //and this line also
         String content = "An accident has just occured at " + location;
         content += "\nCasualty Status = " + armedbox;
         return content;
